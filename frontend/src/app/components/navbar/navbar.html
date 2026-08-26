@@ -1,0 +1,78 @@
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <a href="#home" class="logo">
+      <span class="logo-mark">F</span>
+      <span class="logo-text">Faith<span> Kapama</span></span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Right Side -->
+    <div class="nav-actions">
+
+      <!-- Theme Toggle -->
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        (click)="toggleTheme()"
+      >
+        <span *ngIf="!darkMode">☾</span>
+        <span *ngIf="darkMode">☀</span>
+      </button>
+
+      <!-- GitHub -->
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-btn"
+      >
+        GitHub
+      </a>
+
+      <!-- Mobile Menu -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+
+    <a href="#home" (click)="closeMenu()">Home</a>
+
+    <a href="#about" (click)="closeMenu()">About</a>
+
+    <a href="#projects" (click)="closeMenu()">Projects</a>
+
+    <a href="#contact" (click)="closeMenu()">Contact</a>
+
+    <a
+      href="https://github.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMenu()"
+    >
+      GitHub
+    </a>
+
+  </div>
+</nav>
